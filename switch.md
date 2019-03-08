@@ -1,0 +1,51 @@
+### Switch
+
+##### 	C++ Primer Plus chapter 6.5, page 201
+
+
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+void showmenu(void);
+
+int main()
+{
+	showmenu();
+
+	int choice;
+	cin >> choice;
+
+	while (choice != 5)
+	{
+		switch (choice)
+		{
+			case 1: cout << "\a\n";
+				break;
+			case 2: cout << "Input 2\n";
+				break;
+			case 3: cout << "Input 3\n";
+				break;
+			case 4: "Input 4\n";
+				break;
+			default: cout << "That's not a choice.\n";
+		}
+		showmenu();
+		cin >> choice;
+	}
+	cout << "Bye!\n";
+	
+	return 0;
+}
+
+void showmenu(void)
+{
+	cout << "Please enter 1,2,3,4, or 5:\n"
+		"1) alarm		2) report\n"
+		"3) alibi		4) comfort\n"
+		"5) quit\n";
+}
+```
+
